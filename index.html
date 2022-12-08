@@ -3,26 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Craciun Timer</title>
+    <title>Christmas timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <meta content="Embed Title" property="og:Christmas Timer" />
-    <meta content="Site Description" property="og:Let's wait the Christmas together" />
-    <meta content="https://embed.com/this-is-the-site-url" property="og:url" />
-    <meta content="https://embed.com/embedimage.png" property="og:image" />
-    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-
+    <link href="icon.ico" rel="shortcut icon">
   </head>
-  <body>
+  <body onload="onLoad()">
 
 
-    <div class = "container">
-      <!-- video -->
+    <div class = "container" id="container">
       <video autoplay muted loop id = "bg-video">
-        <source src = "bg-christmas.mp4" type = "video/mp4">
+        <source src = "bg-christmas.mp4" type = "video/mp4" id="video">
       </video>
-      <!-- end of video -->
       <div class = "content">
         <h1>Vine Craciunul Bratani! </h1>
         <h2>In putin timp ajunge!</h2>
@@ -46,16 +39,21 @@
           </div>
         </div>
 
+        <div class="santa" ><img id="santa" src="R.png"></div>
+        <div class="lola"><img id="lola" src="lola.jpg"></div>
+        <div class="cici"><img id="cici" src="cici.png"></div>
+
         <blockquote>
           <sup>
             <span><i class = "fas fa-quote-left"></i></span>
           </sup>
-          Craciun Fericit!!
+          <p class="class">Craciun Fericit</p>
           <sup>
             <span><i class = "fas fa-quote-right"></i></span>
           </sup>
         </blockquote>
       </div> 
+      
     </div>
     
     
