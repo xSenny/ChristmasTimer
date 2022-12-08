@@ -35,6 +35,7 @@ function findDate(){
     if (dateDiff < (1000 * 60 * 60 * 24 * 29)){
         changeBackgrounds(1)
     }
+    spawnLola(SECONDS, HOURS, MINUTES);
 }
 
 function changeBackgrounds(index){
@@ -49,7 +50,6 @@ function changeBackgrounds(index){
 }
 
 function onLoad(){
-    console.log('t')
     let currentTime = new Date(),
         christmasYear = currentTime.getFullYear()+1;
 
@@ -71,7 +71,7 @@ function changeBackground1(){
             background.load();
         }
 }
-var timer;
+
 function animateSanta(s, m){
     if (s == 45 && m % 15 == 0){
         document.getElementById('santa').style.animation = "fly 300s "
@@ -83,7 +83,16 @@ function animateSanta(s, m){
     
 }
 
-
+function spawnLola(s, h, m){
+    if (s == 59 && h == 23 && m == 59){
+        document.getElementById('anunt').style.opacity = 1;
+        document.getElementById('anunt').style.animation = "animate-pop 1s"
+    }else if (s == 55 && h == 23 && m == 59){
+        document.getElementById('anunt').style.opacity = 0;
+        document.getElementById('anunt').style.animation = "animate-pop-reversed 1s"
+    }
+      console.log('hi')
+}
 
 function displayDate(d, h, m, s){
     zile.innerHTML = d;
