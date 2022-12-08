@@ -49,6 +49,7 @@ function changeBackgrounds(index){
 }
 
 function onLoad(){
+    console.log('t')
     let currentTime = new Date(),
         christmasYear = currentTime.getFullYear()+1;
 
