@@ -2,7 +2,7 @@ const zile = document.getElementById('days'),
       minute = document.getElementById('minutes'),
       ore = document.getElementById('hours'),
       secunde = document.getElementById('seconds');
-const background = document.getElementById('bg-video');
+const background = document.getElementById('video');
 let xYear = 2020;
 setInterval(() => {
     findDate();
@@ -32,10 +32,13 @@ function findDate(){
     }
     displayDate(zero(DAYS), zero(HOURS), zero(MINUTES), zero(SECONDS));
     animateSanta(SECONDS, MINUTES);
-    if (dateDiff < (1000 * 60 * 60 * 24 * 29)){
+    if (dateDiff < (1000 * 60 * 60 * 24 * 28)){
         changeBackgrounds(1)
     }
-    spawnLola(SECONDS, HOURS, MINUTES);
+    if (SECONDS == 0 && MINUTES == 0 && HOURS == 0){
+        startEvent(SECONDS, MINUTES, HOURS);
+    }
+    // spawnLola(SECONDS, HOURS, MINUTES);
 }
 
 function changeBackgrounds(index){
@@ -66,8 +69,8 @@ function onLoad(){
 }
 
 function changeBackground1(){
-        if (background.getAttribute("src") != "bg-christmas-1.mp4"){
-            background.setAttribute("src", "bg-christmas-1.mp4");
+        if (background.getAttribute("src") != "bg-christmas-2.mp4"){
+            background.setAttribute("src", "bg-christmas-2.mp4");
             background.load();
         }
 }
@@ -83,16 +86,15 @@ function animateSanta(s, m){
     
 }
 
-function spawnLola(s, h, m){
-    if (s == 59 && h == 23 && m == 59){
-        document.getElementById('anunt').style.opacity = 1;
-        document.getElementById('anunt').style.animation = "animate-pop 1s"
-    }else if (s == 55 && h == 23 && m == 59){
-        document.getElementById('anunt').style.opacity = 0;
-        document.getElementById('anunt').style.animation = "animate-pop-reversed 1s"
-    }
-      console.log('hi')
-}
+// function spawnLola(s, h, m){
+//     if (s == 59 && h == 23 && m == 59){
+//         document.getElementById('anunt').style.opacity = 1;
+//         document.getElementById('anunt').style.animation = "animate-pop 1s"
+//     }else if (s == 55 && h == 23 && m == 59){
+//         document.getElementById('anunt').style.opacity = 0;
+//         document.getElementById('anunt').style.animation = "animate-pop-reversed 1s"
+//     }
+// }
 
 function displayDate(d, h, m, s){
     zile.innerHTML = d;
@@ -106,4 +108,8 @@ function zero(arg){
         arg = "0" + arg;
     }
     return arg;
+}
+
+function startEvent(s, m, h){
+    window.location.href = "v1.20 trailer/trailer.html";
 }
