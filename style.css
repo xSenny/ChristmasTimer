@@ -109,6 +109,7 @@ body{
     justify-content: center;
     background: rgb(231,0,0);
 background: radial-gradient(circle, rgba(231,0,0,1) 0%, rgba(199,77,104,1) 48%, rgba(255,255,255,1) 100%);
+border-radius: 50%;
 }
 .time-show div span{
     display: block;
