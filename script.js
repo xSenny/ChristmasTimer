@@ -2,6 +2,7 @@ const zile = document.getElementById('days'),
       minute = document.getElementById('minutes'),
       ore = document.getElementById('hours'),
       secunde = document.getElementById('seconds');
+      textbg = document.getElementById('textbg');
 const background = document.getElementById('video');
 let xYear = 2020;
 setInterval(() => {
@@ -12,7 +13,7 @@ setInterval(() => {
 
 function findDate(){
     let currentTime = new Date(),
-        christmasYear = currentTime.getFullYear()+1;
+        christmasYear = currentTime.getFullYear();
 
     // getMonth() method returns the month (from 0 to 11)
     if(currentTime.getMonth() == 0 && currentTime.getDate() == 7){
@@ -30,11 +31,8 @@ function findDate(){
         MINUTES = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
         SECONDS = Math.floor((dateDiff) % (1000 * 60) / 1000);
     }
-    displayDate(zero(DAYS), zero(HOURS), zero(MINUTES), zero(SECONDS));
+    displayDate(zero(DAYS), zero(HOURS), zero(MINUTES), zero(SECONDS), DAYS);
     animateSanta(SECONDS, MINUTES);
-    if (dateDiff < (1000 * 60 * 60 * 24 * 28)){
-        changeBackgrounds(1)
-    }
     if (SECONDS == 0 && MINUTES == 0 && HOURS == 0){
         startEvent(SECONDS, MINUTES, HOURS);
     }
@@ -96,11 +94,12 @@ function animateSanta(s, m){
 //     }
 // }
 
-function displayDate(d, h, m, s){
+function displayDate(d, h, m, s, date){
     zile.innerHTML = d;
     ore.innerHTML = h;
     minute.innerHTML = m;
     secunde.innerHTML = s;
+    textbg.innerHTML = date;
 }
 
 function zero(arg){
