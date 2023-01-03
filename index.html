@@ -8,40 +8,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <link href="icon.ico" rel="shortcut icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
   </head>
   <body onload="onLoad()">
 
 
     <div class = "container" id="container">
       <video autoplay muted loop id = "video">
-        <source src = "bg-christmas-1.mp4" type = "video/mp4" id="video">
+        <source src = "bg-christmas-3.mp4" type = "video/mp4" id="bg-video">
       </video>
+      <div class="background">
+        <div class="text" id="textbg">
+          4
+        </div>
+      </div>
       <div class = "content">
         <h1>Vine Craciunul Bratani! </h1>
         <h2>In putin timp ajunge!</h2>
-        <h1 class="a-new-day" id="anunt">Cu o zi mai aproape!</h1>
-
+        
         <div class = "time-show">
-          <div>
+          <div class="con">
             <span id = "days"></span>
             <p>Zile</p>
           </div>
-          <div>
+          <div class="con">
             <span id = "hours"></span>
             <p>Ore</p>
           </div>
-          <div>
+          <div class="con">
             <span id = "minutes"></span>
             <p>Minute</p>
           </div>
-          <div>
+          <div class="con">
             <span id = "seconds"></span>
             <p>Secunde</p>
           </div>
         </div>
 
         <div class="santa"><img id="santa" src="R.png"></div>
-        <div class="lola"><img id="lola" src="lola.jpg"></div>
+        <div class="lola"><img id="lola" src="lola.png"></div>
         <div class="cici"><img id="cici" src="cici.png"></div>
 
         <blockquote>
