@@ -32,6 +32,22 @@ body{
     height: 100%;
     background:rgba(0, 0, 0, 0.3);
 }
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .text {
+    position: relative;
+    top: 50%;
+    font-size: 110vh; 
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(113, 54, 196);
+    font-family: 'Kanit', sans-serif;
+  }
 #video{
     position: absolute;
     z-index: -1;
@@ -41,8 +57,12 @@ body{
 }
 .content{
     z-index: 1;
-    color: rgb(219, 201, 201);
+    color: rgb(228, 214, 214);
     margin: 3rem 0;
+}
+.con{
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(182,70,95,1) 53%, rgba(255,255,255,1) 100%);
 }
 .content h1{
     font-size: 2rem;
@@ -87,6 +107,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: rgb(231,0,0);
+background: radial-gradient(circle, rgba(231,0,0,1) 0%, rgba(199,77,104,1) 48%, rgba(255,255,255,1) 100%);
 }
 .time-show div span{
     display: block;
@@ -95,7 +117,7 @@ body{
     opacity: 0.9;
 }
 .time-show div p{
-    color: #B11809;
+    color: #ae8c89;
     text-transform: uppercase;
     font-size: 1.2rem;
     letter-spacing: 2px;
