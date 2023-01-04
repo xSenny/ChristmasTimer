@@ -41,8 +41,8 @@ body{
   }
   .text {
     position: relative;
-    top: 50%;
-    font-size: 110vh; 
+    top: 55%;
+    font-size: 70vh; 
     transform: translateY(-50%);
     text-align: center;
     color: rgb(113, 54, 196);
