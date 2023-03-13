@@ -13,7 +13,7 @@ setInterval(() => {
 
 function findDate(){
     let currentTime = new Date(),
-        christmasYear = currentTime.getFullYear();
+        christmasYear = currentTime.getFullYear() + 1;
 
     // getMonth() method returns the month (from 0 to 11)
     if(currentTime.getMonth() == 0 && currentTime.getDate() == 7){
